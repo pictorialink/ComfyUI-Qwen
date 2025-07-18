@@ -1,0 +1,11 @@
+huggingface_hub
+torch
+Pillow
+numpy
+transformers
+mlx ; sys_platform == 'darwin'
+mlx_lm ; sys_platform == 'darwin'
+mlx_vlm ; sys_platform == 'darwin'
+llama-cpp-python ; sys_platform == 'linux'
+qwen_vl_utils ; sys_platform == 'linux'
+nvidia-ml-py ; sys_platform == 'linux'

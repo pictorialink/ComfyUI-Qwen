@@ -1,0 +1,157 @@
+{
+    "id": "00000000-0000-0000-0000-000000000000",
+    "revision": 0,
+    "last_node_id": 5,
+    "last_link_id": 3,
+    "nodes": [
+        {
+            "id": 4,
+            "type": "LoadImage",
+            "pos": [
+                167.92578125,
+                213.20703125
+            ],
+            "size": [
+                270,
+                314
+            ],
+            "flags": {},
+            "order": 0,
+            "mode": 0,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "IMAGE",
+                    "type": "IMAGE",
+                    "links": [
+                        2
+                    ]
+                },
+                {
+                    "name": "MASK",
+                    "type": "MASK",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfy-core",
+                "ver": "0.3.44",
+                "Node name for S&R": "LoadImage"
+            },
+            "widgets_values": [
+                "Kontext_example_gguf.png",
+                "image"
+            ]
+        },
+        {
+            "id": 3,
+            "type": "Qwen25_VL",
+            "pos": [
+                527.078125,
+                196.90234375
+            ],
+            "size": [
+                400,
+                208
+            ],
+            "flags": {},
+            "order": 1,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "image",
+                    "type": "IMAGE",
+                    "link": 2
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "STRING",
+                    "type": "STRING",
+                    "links": [
+                        3
+                    ]
+                }
+            ],
+            "properties": {
+                "Node name for S&R": "Qwen25_VL"
+            },
+            "widgets_values": [
+                "描述一下这个图片",
+                0.7,
+                512,
+                1044,
+                "randomize"
+            ]
+        },
+        {
+            "id": 5,
+            "type": "ShowText|pysssss",
+            "pos": [
+                1096.87890625,
+                157.50390625
+            ],
+            "size": [
+                210,
+                142.45703125
+            ],
+            "flags": {},
+            "order": 2,
+            "mode": 0,
+            "inputs": [
+                {
+                    "name": "text",
+                    "type": "STRING",
+                    "link": 3
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "STRING",
+                    "shape": 6,
+                    "type": "STRING",
+                    "links": null
+                }
+            ],
+            "properties": {
+                "cnr_id": "comfyui-custom-scripts",
+                "ver": "aac13aa7ce35b07d43633c3bbe654a38c00d74f5",
+                "Node name for S&R": "ShowText|pysssss"
+            },
+            "widgets_values": [
+                "这张图片是一幅精美的动漫风格插画。画面中描绘了一位年轻的女孩坐在一根横在草地上的原木上，她穿着校服外套和蓝色的裤子，脚上穿着棕色的靴子。她的表情非常愉快，手里拿着一片面包，似乎正在吃东西。她的头发是金色的，耳朵和尾巴像狐狸一样，有着黄色的毛发和白色的内侧，显得非常可爱。背景是一片宁静的自然风光，远处有连绵的山脉和茂密的松树林，前景中有一片平静的湖水。整体画面色彩鲜艳，充满了生机与活力。"
+            ]
+        }
+    ],
+    "links": [
+        [
+            2,
+            4,
+            0,
+            3,
+            0,
+            "IMAGE"
+        ],
+        [
+            3,
+            3,
+            0,
+            5,
+            0,
+            "STRING"
+        ]
+    ],
+    "groups": [],
+    "config": {},
+    "extra": {
+        "ds": {
+            "scale": 1,
+            "offset": [
+                -0.24609375,
+                0.046875
+            ]
+        },
+        "frontendVersion": "1.23.4"
+    },
+    "version": 0.4
+}

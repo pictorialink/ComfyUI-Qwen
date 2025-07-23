@@ -1,4 +1,4 @@
-# ComfyUI-Qwen-MPS
+# ComfyUI-Qwen
 
 支持 Qwen3 + Qwen2.5VL 的推理。
 
